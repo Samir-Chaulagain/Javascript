@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Example</title>
+</head>
+
+<body>
+    <h1>People Entered</h1>
+    <h2 id="numb">0</h2>
+    <button id="add-pep">Increase</button>
+    <button id="decrease-pep">Decrease</button>
+
+    <script>
+
+        const numberDisplay = document.getElementById('numb');
+        const addButton = document.getElementById('add-pep');
+        const decreaseButton = document.getElementById('decrease-pep');
+
+        let count = 0;
+        // adding eventlsitener
+        addButton.addEventListener('click', increment);
+        decreaseButton.addEventListener('click', decrement);
+
+        function increment() {
+            count++;
+            numberDisplay.textContent = count;
+        }
+
+        function decrement() {
+            if (count > 0) {
+                count--;
+                numberDisplay.textContent = count;
+            }
+        }
+    </script>
