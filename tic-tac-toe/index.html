@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid bg-altred" style="height:155px">
+        <div class="row">
+            <h1 class="text-center text-dark mt-4">Tic Tac Toe Game</h1>
+            <p class="text-center">Built Using HTML,JS, Bootstrap, SCSS</p>
+
+        </div>
+    </div>
+    <main>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Enter Player Name</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Joe">
+                                <label for="floatingInput">Name</label>
+                                <div id="emailHelp" class="form-text">Use your name.</div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section id="game-configuration">
+            <ol>
+                <li class=" shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <article>
+                        <h4 class="my-2">Player 1</h4>
+                        <h6 class="text-primary">Player Name</h6>
+                        <p class="player-symbol text-primary"><strong> X</strong> </p>
+                        <button class="btn btn-outline-primary " data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Edit</button>
+                    </article>
+                </li>
+                <li class=" shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+
+                    <article>
+                        <h4>Player 2</h4>
+                        <h6 class="text-primary">Player Name</h6>
+                        <p class="player-symbol text-primary"><strong> O</strong> </p>
+                        <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Edit</button>
+
+                    </article>
+                </li>
+
+            </ol>
+            <button class="btn btn-dark">Start New Game </button>
+        </section>
+        <section id="active-game" class="text-center ">
+            <article id="game-over" class="bg-primary text-light py-3 mb-3 d-none">
+                <h3>
+                    You won <span id="winner-player-name">"<strong>Player Name</strong>"</span>
+                </h3>
+                <p>
+                    Click "Start new game" to play again
+                </p>
+            </article>
+            <p>
+                It's Your Turn, <span id="active-player-name" class="text-primary"><strong>Player name</strong></span>
+            </p>
+            <ul id="game-board" class="list-unstyled">
+                <li></li>
+                <li></li>
+                <li class="disabled">X</li>
+                <li></li>
+                <li></li>
+                <li class="disabled">X</li>
+                <li></li>
+                <li class="disabled">O</li>
+                <li></li>
+            </ul>
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>
