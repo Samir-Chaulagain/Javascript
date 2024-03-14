@@ -35,6 +35,11 @@
     width: 90%;
     max-width:40rem ;
     margin: auto;
+    display: none;
+
+}
+#active-game{
+    display: none;
 
 }
 #game-board li{
@@ -53,5 +58,6 @@
    background-color: rgb(128, 43, 43);
    cursor: default;
    color: white;
+   pointer-events: none;
 }     
 
