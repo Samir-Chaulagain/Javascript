@@ -6,6 +6,8 @@ $primary:rgb(128, 43, 43);
 $custom-theme-colors:(
     "altred":#dda0a0,
     "altcardcolor":#c6c2c2,
+    "altcardcolor2":#c6c2c2,
+
     );
 
 $theme-colors: map-merge($custom-theme-colors , $theme-colors );
